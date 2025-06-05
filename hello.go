@@ -3,10 +3,12 @@ package hello
 import (
 	"errors"
 	"fmt"
+	"log"
 )
 
 func Hello(name string) (string, error) {
-	if name != "" {
+	log.Println(name)
+	if name == "" {
 		return "", errors.New("empty name")
 	}
 
